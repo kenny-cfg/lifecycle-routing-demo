@@ -1,28 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-import IncrementButton from './component/IncrementButton';
-import IncrementButtonFunctional from './component/IncrementButtonFunctional';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Root from './component/Root';
+import Demo from './component/Demo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <IncrementButton />
-        <IncrementButtonFunctional />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          <Link to="/">ROOT</Link>
+          <Link to="/demo">DEMO</Link>
+        </header>
+        <div className='container'>
+          <Routes>
+            <Route path="/" index element={<Root/>}></Route>
+            <Route path="demo" element={<Demo />}></Route>
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

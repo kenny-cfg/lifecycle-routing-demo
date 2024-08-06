@@ -5,7 +5,9 @@ const IncrementButtonFunctional = () => {
     count: 0
   })
   
-  useEffect(() => console.log('Functional exists'), [])
+  useEffect(() => {
+    console.log('Functional exists')
+  }, [])
   
   useEffect(() => console.log(`Functional count: ${state.count}`))
 
