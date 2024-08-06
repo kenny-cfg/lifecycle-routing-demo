@@ -24,6 +24,10 @@ export default class IncrementButton extends Component {
   componentDidMount() {
     console.log('I exist')
   }
+  
+  componentDidUpdate() {
+    console.log(`Current count: ${this.state.count}`)
+  }
 
   render() {
     const onClick = () => {
