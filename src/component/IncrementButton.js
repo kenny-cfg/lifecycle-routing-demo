@@ -22,7 +22,7 @@ export default class IncrementButton extends Component {
     }
     return (
       <button onClick={onClick}>
-        {this.state.count}
+        CLASSY: {this.state.count}
       </button>
     )
   }
